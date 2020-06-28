@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="xyy">
   <meta name="keywords" content="">
-  <title>C++向Java变现的读书笔记 - xyy的隐秘站点</title>
+  <title>概率论与数理统计-读书笔记1 - xyy的隐秘站点</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -152,8 +152,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-26 10:20">
-      2020年6月26日 上午
+    <time datetime="2020-06-28 14:51">
+      2020年6月28日 下午
     </time>
   </div>
 
@@ -163,7 +163,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.5k 字
     </span>
   
 
@@ -173,7 +173,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15
+      21
        分钟
     </span>
   
@@ -204,97 +204,122 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <p> 根据阅读&lt;Java核心技术&gt;自己整理的语法基础差异点</p>
+              <p><del>洗稿浙大版的读书笔记</del></p>
+<p>日常心慌, 赶快多读点这个啥</p>
 <a id="more"></a>
 
-<h2 id="C-向Java变现的读书笔记"><a href="#C-向Java变现的读书笔记" class="headerlink" title="C++向Java变现的读书笔记"></a>C++向Java变现的读书笔记</h2><p>以下根据阅读&lt;Java核心技术 中文版 9th 卷一 &gt;</p>
-<p>整理了C++与Java的异同还有我在C++中没见过的东西, </p>
-<p>方便我自己梳理与查阅 :D</p>
-<p><del>这几天速成过程也很邋遢, 可能有一些很傻的错误</del></p>
-<p>而且书还没读完, 变现还没成功, 后面应该会继续补</p>
-<p> <font color=gray size=2><em>以下分点顺序大概是按照Java大部分书籍板块顺序来进行的</em></font></p>
-<hr>
+
+
+<p>[TOC]</p>
+<h1 id="第一章-概率论的基本概念"><a href="#第一章-概率论的基本概念" class="headerlink" title="第一章 概率论的基本概念"></a>第一章 概率论的基本概念</h1><h2 id="sect-1-随机实验"><a href="#sect-1-随机实验" class="headerlink" title="&sect; 1 随机实验"></a>&sect; 1 随机实验</h2><p><strong>随机实验</strong></p>
+<ul>
+<li>可以在相同条件下重复实验</li>
+<li>每次实验的可能结果不止一个, 并且能事先确定所以可能的结果</li>
+<li>每次实验之前不能确定会出现哪一个结果</li>
+</ul>
+<h2 id="sect-2-样本空间-随机事件"><a href="#sect-2-样本空间-随机事件" class="headerlink" title="&sect; 2 样本空间, 随机事件"></a>&sect; 2 样本空间, 随机事件</h2><h3 id="一-样本空间"><a href="#一-样本空间" class="headerlink" title="(一) 样本空间"></a>(一) 样本空间</h3><p><strong>样本空间</strong>:将随机试验E的所有可能结果组成的集合成为E的样本空间, 记为S, 样本空间的每个元素, 成为样本点</p>
+<h3 id="二-随机事件"><a href="#二-随机事件" class="headerlink" title="(二) 随机事件"></a>(二) 随机事件</h3><p><strong>随机事件</strong>:简称事件, 即S的字迹</p>
+<p><strong>基本事件</strong>:由一个样本点组成的单点集</p>
+<p>其他: 必然事件, 不可能事件</p>
+<h3 id="三-事件间的关系与事件的运算"><a href="#三-事件间的关系与事件的运算" class="headerlink" title="(三) 事件间的关系与事件的运算"></a>(三) 事件间的关系与事件的运算</h3><p>几种关系:</p>
+<ul>
+<li>相等</li>
+<li>和事件 $A \cup B={x \mid x \in A \text { 或 } x \in B}$</li>
+<li>积事件 $A \cap B={x \mid x \in A \text { 且 } x \in B}$</li>
+<li>差事件 $A-B={x \mid x \in A \text { 且 } x \notin B}$</li>
+<li>互斥事件 $A \cap B=\varnothing$</li>
+<li>逆事件(两个事件必有一个发生, 且仅有一个) $A \cup B=S$ 且 $A \cap B=\varnothing$</li>
+</ul>
+<p>几种运算定律</p>
+<ul>
+<li><p>交换律: $A \cup B=B \cup A ; A \cap B=B \cap A$</p>
+</li>
+<li><p>结合律 $: A \cup(B \cup C)=(A \cup B) \cup C$<br> $A \cap(B \cap C)=(A \cap B) \cap C$</p>
+</li>
+<li><p>分配律 $: A \cup(B \cap C)=(A \cup B) \cap(A \cup C)$</p>
+<p>$A \cap(B \cup C)=(A \cap B) \cup(A \cap C)$</p>
+</li>
+<li><p>德摩根律 $: \overline{A \cup B}=\bar{A} \cap \bar{B} ; \quad \overline{A \cap B}=\bar{A} \cup \bar{B}$</p>
+</li>
+<li><p>对减法运算满足: $A-B=A \bar{B}$</p>
+</li>
+</ul>
+<p>==注释: 注意分辨结合律与分配律的符号啊!==</p>
+<h2 id="sect-3-频率与概率"><a href="#sect-3-频率与概率" class="headerlink" title="&sect; 3 频率与概率"></a>&sect; 3 频率与概率</h2><h3 id="一-频率"><a href="#一-频率" class="headerlink" title="(一) 频率"></a>(一) 频率</h3><p>频率的定义: 在相同条件下, 进行了n次实验, 在其中, 事件A发生的次数$n_A$称为事件A发生的频数, 比值$n_a/n$称为事件A发生的频率, 并记成$f_{n}(A)$</p>
+<p><strong>三大基本性质</strong></p>
 <ol>
-<li><p>源代码文件名<strong>必须</strong>与公共类名相同<br>main方法<strong>必须</strong>声明为public  <br>main方法<strong>必须</strong>有一个外壳类<br>main方法<strong>必须</strong>是静态的</p>
+<li><p>$0 \leqslant f_{n}(A) \leqslant 1$</p>
 </li>
-<li><p>Java中的类型可以分为<br><strong>primitive type</strong><br><strong>reference to objects</strong></p>
+<li><p>$f_{n}(S)=1$</p>
 </li>
-<li><p>Java中多了一种文档注释, 以<strong>/**</strong>开头, <strong>*/</strong>结束</p>
+<li><p>若 $A_{1}, A_{2}, \cdots, A_{k}$ 是两两互不相容的事件,则</p>
+<p>$f_{n}\left(A_{1} \cup A_{2} \cup \cdots \cup A_{k}\right)=f_{n}\left(A_{1}\right)+f_{n}\left(A_{2}\right)+\cdots+f_{n}\left(A_{k}\right)$</p>
 </li>
-<li><p>Java中int范围与机器无关</p>
+</ol>
+<h3 id="二-概率"><a href="#二-概率" class="headerlink" title="(二) 概率"></a>(二) 概率</h3><p>概率的定义: 设E是随机实验, S是样本空间, 对于E的每一事件A赋予一个实数, 记为$P(A)$, 称为事件A的概率.</p>
+<p><strong>三大基本性质</strong></p>
+<ol>
+<li>非负性, 即大于0</li>
+<li>规范性, 即$P(S) = 1$</li>
+<li>可列可加性, 设 $A_{1}, A_{2}, \cdots$ 是两两互不相容的事件, 即对于 $A_{i} A_{j}=\varnothing$, $i \neq j, i, j=1,2, \cdots,$ 有$P\left(A_{1} \cup A_{2} \cup \cdots\right)=P\left(A_{1}\right)+P\left(A_{2}\right)+\cdots$</li>
+</ol>
+<p>可以由上推出以下几个性质</p>
+<ul>
+<li><p>$P(\varnothing)=0$</p>
 </li>
-<li><p>Ob开头-&gt;二进制</p>
+<li><p>(有限可加性) 若 $A_{1}, A_{2}, \cdots, A_{n}$ 是两两互不相容的事件,则有$P\left(A_{1} \cup A_{2} \cup \cdots \cup A_{n}\right)=P\left(A_{1}\right)+P\left(A_{2}\right)+\cdots+P\left(A_{n}\right)$</p>
 </li>
-<li><p>建议不要用char <font color=gray size=2><em>(Java核心技术卷一  中文版  9th p36)</em></font></p>
+<li><p>设 $A, B$ 是两个事件,若 $A \subset B$,则有</p>
+<p>$P(B-A)=P(B)-P(A)$</p>
+<p>$P(B) \geqslant P(A)$</p>
 </li>
-<li><p>boolean不能和int相互转换<br>不要对boolean进行强制类型转换</p>
+<li><p>对任意事件A, $P(A) \leqslant 1$</p>
 </li>
-<li><p>const是Java未使用的保留关键字, 常量的关键字是 <em>static final</em> </p>
+<li><p>$P(\bar{A})=1-P(A)$</p>
 </li>
-<li><p>Java字符串就是Unicode字符序列<br>和C++一样, Java无内置的字符串类型<br>但标准库中提供了一个predefined class -&gt;<strong>String</strong></p>
+<li><p>对任意事件A, B, $P(A \cup B)=P(A)+P(B)-P(A B)$</p>
 </li>
-<li><p>String类不提供直接修改字符串的方法(和C++的std::string类似)</p>
+</ul>
+<p>==自己的补充: 当A, B同时发生时, C必然发生, 即为 $P(AB)\leqslant P(C)$==</p>
+<h2 id="sect-4-古典概型-等可能概型"><a href="#sect-4-古典概型-等可能概型" class="headerlink" title="&sect; 4 古典概型(等可能概型)"></a>&sect; 4 古典概型(等可能概型)</h2><p>古典概型性质:</p>
+<ol>
+<li>试验的样本空间只包含有限个元素</li>
+<li>试验中每个基本事件发生的可能性相同</li>
+</ol>
+<p><strong>实验推断原理</strong>: 概率很小的事件在一次实验中实际上几乎是不发生的</p>
+<h2 id="sect-5-条件概率"><a href="#sect-5-条件概率" class="headerlink" title="&sect; 5 条件概率"></a>&sect; 5 条件概率</h2><h3 id="一-条件概率"><a href="#一-条件概率" class="headerlink" title="(一) 条件概率"></a>(一) 条件概率</h3><p><strong>条件概率的定义</strong>:</p>
+<p>设 $A, B$ 是两个事件,且 $P(A)&gt;0,$ 称<br>$$<br>P(B \mid A)=\frac{P(A B)}{P(A)}<br>$$<br>为在事件 A 发生的条件下事件 B 发生的条件概率。</p>
+<p><strong>三大性质</strong>:</p>
+<ol>
+<li>非负性</li>
+<li>规范性</li>
+<li>可列可加性</li>
+</ol>
+<h3 id="二-乘法定理"><a href="#二-乘法定理" class="headerlink" title="(二) 乘法定理"></a>(二) 乘法定理</h3><p><strong>乘法定理</strong>: 设 $P(A)&gt;0$,则有 $P(A B)=P(B \mid A) P(A)$</p>
+<h3 id="三-全概率公式和贝叶斯公式"><a href="#三-全概率公式和贝叶斯公式" class="headerlink" title="(三) 全概率公式和贝叶斯公式"></a>(三) 全概率公式和贝叶斯公式</h3><p><strong>划分</strong>的定义:  </p>
+<p>设 S 为试验 E 的样本空间 , $B_{1}, B_{2}, \cdots, B_{n}$ 为 $E$ 的一组事件.若</p>
+<p>(i) $B_{i} B_{j}=\varnothing, i \neq j, i, j=1,2, \cdots, n$</p>
+<p>(ii) $B_{1} \cup B_{2} \cup \cdots \cup B_{n}=S$</p>
+<p>则称 $B_{1}, B_{2}, \cdots, B_{n}$ 为样本空间 $S$ 的一个划分.</p>
+<hr>
+<p><strong>全概率公式</strong> : </p>
+<p>设试验 E 的样本空间为 S，A 为 E 的事件, $B_{1}, B_{2}, \cdots, B_{n}$ 为 $S$ 的一个划分，且 $P\left(B_{i}\right)&gt;0(i=1,2, \cdots, n),$ 则</p>
+<p>$$\begin{array}{c}<br>P(A)=P\left(A \mid B_{1}\right) P\left(B_{1}\right)+P\left(A \mid B_{2}\right) P\left(B_{2}\right)+\cdots+ \<br>P\left(A \mid B_{n}\right) P\left(B_{n}\right)<br>\end{array}$$</p>
+<p>称为全概率公式。</p>
+<p>==用处:用于计算由若干原因引起的复杂事件概率==</p>
+<hr>
+<p><strong>贝叶斯公式</strong>: </p>
+<p>设试验 E 的样本空间为 S.A 为 E 的事件，$B_{1}, B_{2}, \cdots, B_{n}$ 为 $S$ 的一<br>个划分，且 $P(A)&gt;0, P\left(B_{i}\right)&gt;0(i=1,2, \cdots, n),$ 则<br>$$<br>P\left(B_{i} \mid A\right)=\frac{P\left(A \mid B_{i}\right) P\left(B_{i}\right)}{\sum_{j=1}^{n} P\left(A \mid B_{j}\right) P\left(B_{j}\right)}, \quad i=1,2, \cdots, n<br>$$<br>称为贝叶斯 (Bayes)公式</p>
+<p>(可以通过条件概率+乘法定理+全概率公式加以证明)</p>
+<p>==用处: 用来计算在复杂事件已发生的条件下, 某一种原因发生的条件概率==</p>
+<h2 id="sect-6-独立性"><a href="#sect-6-独立性" class="headerlink" title="&sect; 6 独立性"></a>&sect; 6 独立性</h2><p><strong>独立的定义</strong>: </p>
+<p>设 $A, B$ 是两事件，如果满足等式<br>$$<br>P(A B)=P(A) P(B)<br>$$<br>则称事件 A，B 相互独立，简称 A,B 独立。</p>
+<p><strong>两大定理</strong>:</p>
+<ol>
+<li><p>设 $A, B$ 是两事件,且 $P(A)&gt;0 .$ 若 $A, B$ 相互独立,则 $P(B \mid A)=$<br>$P(B) .$ 反之亦然.</p>
 </li>
-<li><p>Java支持类似C语言的格式化输出<br><em>System.out.prin<strong>t</strong>(“%8.2f”, x);</em><br>或<br><em>String message = String.format(“Hello, %s”, name);</em></p>
-</li>
-<li><p>Java中没用 <em>goto</em> 语句, 但有可以带标签的 <em>break</em> 语句, 实现从内存循环跳出</p>
-</li>
-<li><p>Java<strong>没有</strong>提供运算符重载功能</p>
-</li>
-<li><p>Java中声明数组可以这样写<br>int[ ] a //Java style<br>或<br>int a[ ] //C++ style</p>
-</li>
-<li><p>Java中有类似C++11提供的 <em>for range</em> 循环, 即Java中的 <em>for each</em> 循环, 但后者由于只能传值, 所以是<strong>只读的</strong></p>
-</li>
-<li><p>Java中的对象变量类似于C++中对象的指针, 仅仅是引用一个对象</p>
-</li>
-<li><p>Java中不需要显式地如C++中用 <em>const</em> 关键字标注 accessor method</p>
-</li>
-<li><p>数组进行deep copy需要使用Arrays类的copyOf方法</p>
-</li>
-<li><p>Java实际上没有像C中的多维数组, 只有一维数组, 多维数组可以被理解为数组的数组</p>
-</li>
-<li><p>C++中类的implement可以写在类外, 但在Java中, 方法必须在类内部实现</p>
-</li>
-<li><p>和C++类似, Java的静态方法是一种不能向对象实施操作的方法, 即不传this</p>
-</li>
-<li><p>Java总是采用按值传递</p>
-</li>
-<li><p>可能是我在学C++时没仔细想, 返回类型并不属于函数signature的一部分</p>
-</li>
-<li><p>Java中构造方法里成员的默认值:<br>数值-&gt;0<br>boolean-&gt;false<br>对象引用-&gt;null (不是C++里大写的NULL)</p>
-</li>
-<li><p>类似C++, Java也有default constructor, 也只有在没有主动写任何构造方法时才会合成</p>
-</li>
-<li><p>Java类可以直接赋初始值(当然C++11也可啦)</p>
-</li>
-<li><p>Java中类不需要显示析构器, 对象用完可以用close方法清理</p>
-</li>
-<li><p>使用包(package)的主要原因是保证类名的唯一性, 一定程度上类似于C++的命名空间<br>习惯上以公司域名逆序为包名, 如: com.xyy.www</p>
-</li>
-<li><p>我要访问另一个包里的东西<br>第一种:类似C++里的命名空间+作用域解析运算符, 在类前写完整包名: java,util.Date today …<br>第二种:用import语句(不类似于include语句, 有分号)(可以使用*导入一些层级下的所有类)<br>(如果访问修饰符非public, 则类只能在定义的包内使用, 不能import)</p>
-</li>
-<li><p>我要把类放入包类:<br>需将package语句放在源文件开头(也在import之前)<br><em>e.g. package com.xyy;</em><br>如果无package语句, 则文件中的类就被放到default package中</p>
-</li>
-<li><p>对于Java中的类, 不像C++, 如果没写pulic或private或protected, 则默认设为包可见</p>
-</li>
-<li><p>Java与C++定义继承类的方式很像, 但Java用关键字 <em>extends</em><br><em>e.g. class Manager extends Employee{}</em></p>
-</li>
-<li><p>要调用父类方法, 可以用<strong>关键字</strong> <em>super</em> <br><em>e.g. super.getMoney( );</em><br>但 <em>super</em> 不类似于 <em>this</em> ,它只是关键字<br>但两者都可以用来调用对应类的方法, 包括构造方法</p>
-</li>
-<li><p>Java默认为dynamic binding, 我把Java里的类方法, 不包括构造方法, 都理解为类似C++的虚函数</p>
-</li>
-<li><p>在Java中如果不希望一个方法有 <em>virtual</em> 特征, 可以标记为 <em>final</em></p>
-</li>
-<li><p>Java里不支持多重继承</p>
-</li>
-<li><p>和C++声明抽象类的方法不同, Java使用关键字 <em>abstract</em> <br>类声明要写: <em>e.g. <strong>abstract</strong> class Person{}</em><br>虚方法也要写: <em>e.g. public <strong>abstract</strong> String getString( )</em></p>
-</li>
-<li><p>Java中protected部分,对所有子类及<strong>同一个包内的其他类</strong>都可见<br>因此安全性比C++差</p>
-</li>
-<li><p>Object类是Java中所有类的祖先.但不需要显式地写extends啥啥的<br>在Java中,只有primitive types不是对象</p>
-</li>
-<li><p>有时需要将primitive type转换为对象, 基本每种基本类型都有一个与之对应的wrapper(包装器?)<br>—————————————————————-<br>int-&gt;Integer<br>long-&gt;Long<br>float-&gt;Float<br>double-&gt;Double<br>short-&gt;Short<br>byte-&gt;Byte<br>———————–以上的超类是Number———–</p>
-<p>character-&gt;Character<br>void-&gt;Void<br>boolean-&gt;Boolean<br>—————————————————————-<br>一旦构造了包装器, 里面的值是 <em>final</em> 的<br>当有调用如 list.add(3);<br>这里等价于 list.add(Integer.valueOf(3))<br>这里称作<strong>autoboxing(自动装箱)</strong><br>而类似地, 将一个Integer对象赋给一个int时, 也会有自动拆箱</p>
+<li><p>若事件 A 与 B 相互独立，则下列各对事件也相互独立：</p>
+<p>$A$ 与 $\bar{B}, \bar{A}$ 与 $B, \bar{A}$ 与 $\bar{B}$</p>
 </li>
 </ol>
 
@@ -313,18 +338,12 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/06/28/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">概率论与数理统计-读书笔记1</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/06/26/A-New-Post/">
-                        <span class="hidden-mobile">A New Post</span>
+                      <a href="/2020/06/26/C++%E5%90%91Java%E5%8F%98%E7%8E%B0%E7%9A%84%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">C++向Java变现的读书笔记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -463,7 +482,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "C++向Java变现的读书笔记&nbsp;",
+        "概率论与数理统计-读书笔记1&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
