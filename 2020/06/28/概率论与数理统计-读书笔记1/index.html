@@ -6,7 +6,7 @@
 
 
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <meta name="viewport"
@@ -47,11 +47,11 @@
 
 
   <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 <body>
-  <header style="height: 70vh;">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -207,9 +207,6 @@
               <p><del>洗稿浙大版的读书笔记</del></p>
 <p>日常心慌, 赶快多读点这个啥</p>
 <a id="more"></a>
-
-
-
 <p>[TOC]</p>
 <h1 id="第一章-概率论的基本概念"><a href="#第一章-概率论的基本概念" class="headerlink" title="第一章 概率论的基本概念"></a>第一章 概率论的基本概念</h1><h2 id="sect-1-随机实验"><a href="#sect-1-随机实验" class="headerlink" title="&sect; 1 随机实验"></a>&sect; 1 随机实验</h2><p><strong>随机实验</strong></p>
 <ul>
@@ -245,15 +242,15 @@
 </li>
 </ul>
 <p>==注释: 注意分辨结合律与分配律的符号啊!==</p>
-<h2 id="sect-3-频率与概率"><a href="#sect-3-频率与概率" class="headerlink" title="&sect; 3 频率与概率"></a>&sect; 3 频率与概率</h2><h3 id="一-频率"><a href="#一-频率" class="headerlink" title="(一) 频率"></a>(一) 频率</h3><p>频率的定义: 在相同条件下, 进行了n次实验, 在其中, 事件A发生的次数$n_A$称为事件A发生的频数, 比值$n_a/n$称为事件A发生的频率, 并记成$f_{n}(A)$</p>
+<h2 id="sect-3-频率与概率"><a href="#sect-3-频率与概率" class="headerlink" title="&sect; 3 频率与概率"></a>&sect; 3 频率与概率</h2><h3 id="一-频率"><a href="#一-频率" class="headerlink" title="(一) 频率"></a>(一) 频率</h3><p>频率的定义: 在相同条件下, 进行了n次实验, 在其中, 事件A发生的次数$n<em>A$称为事件A发生的频数, 比值$n_a/n$称为事件A发生的频率, 并记成$f</em>{n}(A)$</p>
 <p><strong>三大基本性质</strong></p>
 <ol>
 <li><p>$0 \leqslant f_{n}(A) \leqslant 1$</p>
 </li>
 <li><p>$f_{n}(S)=1$</p>
 </li>
-<li><p>若 $A_{1}, A_{2}, \cdots, A_{k}$ 是两两互不相容的事件,则</p>
-<p>$f_{n}\left(A_{1} \cup A_{2} \cup \cdots \cup A_{k}\right)=f_{n}\left(A_{1}\right)+f_{n}\left(A_{2}\right)+\cdots+f_{n}\left(A_{k}\right)$</p>
+<li><p>若 $A<em>{1}, A</em>{2}, \cdots, A_{k}$ 是两两互不相容的事件,则</p>
+<p>$f<em>{n}\left(A</em>{1} \cup A<em>{2} \cup \cdots \cup A</em>{k}\right)=f<em>{n}\left(A</em>{1}\right)+f<em>{n}\left(A</em>{2}\right)+\cdots+f<em>{n}\left(A</em>{k}\right)$</p>
 </li>
 </ol>
 <h3 id="二-概率"><a href="#二-概率" class="headerlink" title="(二) 概率"></a>(二) 概率</h3><p>概率的定义: 设E是随机实验, S是样本空间, 对于E的每一事件A赋予一个实数, 记为$P(A)$, 称为事件A的概率.</p>
@@ -261,13 +258,13 @@
 <ol>
 <li>非负性, 即大于0</li>
 <li>规范性, 即$P(S) = 1$</li>
-<li>可列可加性, 设 $A_{1}, A_{2}, \cdots$ 是两两互不相容的事件, 即对于 $A_{i} A_{j}=\varnothing$, $i \neq j, i, j=1,2, \cdots,$ 有$P\left(A_{1} \cup A_{2} \cup \cdots\right)=P\left(A_{1}\right)+P\left(A_{2}\right)+\cdots$</li>
+<li>可列可加性, 设 $A<em>{1}, A</em>{2}, \cdots$ 是两两互不相容的事件, 即对于 $A<em>{i} A</em>{j}=\varnothing$, $i \neq j, i, j=1,2, \cdots,$ 有$P\left(A<em>{1} \cup A</em>{2} \cup \cdots\right)=P\left(A<em>{1}\right)+P\left(A</em>{2}\right)+\cdots$</li>
 </ol>
 <p>可以由上推出以下几个性质</p>
 <ul>
 <li><p>$P(\varnothing)=0$</p>
 </li>
-<li><p>(有限可加性) 若 $A_{1}, A_{2}, \cdots, A_{n}$ 是两两互不相容的事件,则有$P\left(A_{1} \cup A_{2} \cup \cdots \cup A_{n}\right)=P\left(A_{1}\right)+P\left(A_{2}\right)+\cdots+P\left(A_{n}\right)$</p>
+<li><p>(有限可加性) 若 $A<em>{1}, A</em>{2}, \cdots, A<em>{n}$ 是两两互不相容的事件,则有$P\left(A</em>{1} \cup A<em>{2} \cup \cdots \cup A</em>{n}\right)=P\left(A<em>{1}\right)+P\left(A</em>{2}\right)+\cdots+P\left(A_{n}\right)$</p>
 </li>
 <li><p>设 $A, B$ 是两个事件,若 $A \subset B$,则有</p>
 <p>$P(B-A)=P(B)-P(A)$</p>
@@ -288,7 +285,9 @@
 </ol>
 <p><strong>实验推断原理</strong>: 概率很小的事件在一次实验中实际上几乎是不发生的</p>
 <h2 id="sect-5-条件概率"><a href="#sect-5-条件概率" class="headerlink" title="&sect; 5 条件概率"></a>&sect; 5 条件概率</h2><h3 id="一-条件概率"><a href="#一-条件概率" class="headerlink" title="(一) 条件概率"></a>(一) 条件概率</h3><p><strong>条件概率的定义</strong>:</p>
-<p>设 $A, B$ 是两个事件,且 $P(A)&gt;0,$ 称<br>$$<br>P(B \mid A)=\frac{P(A B)}{P(A)}<br>$$<br>为在事件 A 发生的条件下事件 B 发生的条件概率。</p>
+<p>设 $A, B$ 是两个事件,且 $P(A)&gt;0,$ 称</p>
+<script type="math/tex; mode=display">
+P(B \mid A)=\frac{P(A B)}{P(A)}</script><p>为在事件 A 发生的条件下事件 B 发生的条件概率。</p>
 <p><strong>三大性质</strong>:</p>
 <ol>
 <li>非负性</li>
@@ -297,23 +296,29 @@
 </ol>
 <h3 id="二-乘法定理"><a href="#二-乘法定理" class="headerlink" title="(二) 乘法定理"></a>(二) 乘法定理</h3><p><strong>乘法定理</strong>: 设 $P(A)&gt;0$,则有 $P(A B)=P(B \mid A) P(A)$</p>
 <h3 id="三-全概率公式和贝叶斯公式"><a href="#三-全概率公式和贝叶斯公式" class="headerlink" title="(三) 全概率公式和贝叶斯公式"></a>(三) 全概率公式和贝叶斯公式</h3><p><strong>划分</strong>的定义:  </p>
-<p>设 S 为试验 E 的样本空间 , $B_{1}, B_{2}, \cdots, B_{n}$ 为 $E$ 的一组事件.若</p>
-<p>(i) $B_{i} B_{j}=\varnothing, i \neq j, i, j=1,2, \cdots, n$</p>
-<p>(ii) $B_{1} \cup B_{2} \cup \cdots \cup B_{n}=S$</p>
-<p>则称 $B_{1}, B_{2}, \cdots, B_{n}$ 为样本空间 $S$ 的一个划分.</p>
+<p>设 S 为试验 E 的样本空间 , $B<em>{1}, B</em>{2}, \cdots, B_{n}$ 为 $E$ 的一组事件.若</p>
+<p>(i) $B<em>{i} B</em>{j}=\varnothing, i \neq j, i, j=1,2, \cdots, n$</p>
+<p>(ii) $B<em>{1} \cup B</em>{2} \cup \cdots \cup B_{n}=S$</p>
+<p>则称 $B<em>{1}, B</em>{2}, \cdots, B_{n}$ 为样本空间 $S$ 的一个划分.</p>
 <hr>
 <p><strong>全概率公式</strong> : </p>
-<p>设试验 E 的样本空间为 S，A 为 E 的事件, $B_{1}, B_{2}, \cdots, B_{n}$ 为 $S$ 的一个划分，且 $P\left(B_{i}\right)&gt;0(i=1,2, \cdots, n),$ 则</p>
-<p>$$\begin{array}{c}<br>P(A)=P\left(A \mid B_{1}\right) P\left(B_{1}\right)+P\left(A \mid B_{2}\right) P\left(B_{2}\right)+\cdots+ \<br>P\left(A \mid B_{n}\right) P\left(B_{n}\right)<br>\end{array}$$</p>
-<p>称为全概率公式。</p>
+<p>设试验 E 的样本空间为 S，A 为 E 的事件, $B<em>{1}, B</em>{2}, \cdots, B<em>{n}$ 为 $S$ 的一个划分，且 $P\left(B</em>{i}\right)&gt;0(i=1,2, \cdots, n),$ 则</p>
+<script type="math/tex; mode=display">\begin{array}{c}
+P(A)=P\left(A \mid B_{1}\right) P\left(B_{1}\right)+P\left(A \mid B_{2}\right) P\left(B_{2}\right)+\cdots+ \\
+P\left(A \mid B_{n}\right) P\left(B_{n}\right)
+\end{array}</script><p>称为全概率公式。</p>
 <p>==用处:用于计算由若干原因引起的复杂事件概率==</p>
 <hr>
 <p><strong>贝叶斯公式</strong>: </p>
-<p>设试验 E 的样本空间为 S.A 为 E 的事件，$B_{1}, B_{2}, \cdots, B_{n}$ 为 $S$ 的一<br>个划分，且 $P(A)&gt;0, P\left(B_{i}\right)&gt;0(i=1,2, \cdots, n),$ 则<br>$$<br>P\left(B_{i} \mid A\right)=\frac{P\left(A \mid B_{i}\right) P\left(B_{i}\right)}{\sum_{j=1}^{n} P\left(A \mid B_{j}\right) P\left(B_{j}\right)}, \quad i=1,2, \cdots, n<br>$$<br>称为贝叶斯 (Bayes)公式</p>
+<p>设试验 E 的样本空间为 S.A 为 E 的事件，$B<em>{1}, B</em>{2}, \cdots, B<em>{n}$ 为 $S$ 的一<br>个划分，且 $P(A)&gt;0, P\left(B</em>{i}\right)&gt;0(i=1,2, \cdots, n),$ 则</p>
+<script type="math/tex; mode=display">
+P\left(B_{i} \mid A\right)=\frac{P\left(A \mid B_{i}\right) P\left(B_{i}\right)}{\sum_{j=1}^{n} P\left(A \mid B_{j}\right) P\left(B_{j}\right)}, \quad i=1,2, \cdots, n</script><p>称为贝叶斯 (Bayes)公式</p>
 <p>(可以通过条件概率+乘法定理+全概率公式加以证明)</p>
 <p>==用处: 用来计算在复杂事件已发生的条件下, 某一种原因发生的条件概率==</p>
 <h2 id="sect-6-独立性"><a href="#sect-6-独立性" class="headerlink" title="&sect; 6 独立性"></a>&sect; 6 独立性</h2><p><strong>独立的定义</strong>: </p>
-<p>设 $A, B$ 是两事件，如果满足等式<br>$$<br>P(A B)=P(A) P(B)<br>$$<br>则称事件 A，B 相互独立，简称 A,B 独立。</p>
+<p>设 $A, B$ 是两事件，如果满足等式</p>
+<script type="math/tex; mode=display">
+P(A B)=P(A) P(B)</script><p>则称事件 A，B 相互独立，简称 A,B 独立。</p>
 <p><strong>两大定理</strong>:</p>
 <ol>
 <li><p>设 $A, B$ 是两事件,且 $P(A)&gt;0 .$ 若 $A, B$ 相互独立,则 $P(B \mid A)=$<br>$P(B) .$ 反之亦然.</p>
@@ -593,7 +598,24 @@
         });
       })
       ;
-    </script>
+    </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
   
 
 

@@ -6,7 +6,7 @@
 
 
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <meta name="viewport"
@@ -47,11 +47,11 @@
 
 
   <script  src="/js/utils.js" ></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 <body>
-  <header style="height: 70vh;">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -204,15 +204,15 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <p> 根据阅读&lt;Java核心技术&gt;自己整理的语法基础差异点</p>
+              <p> 根据阅读<Java核心技术>自己整理的语法基础差异点</p>
 <a id="more"></a>
-
-<h2 id="C-向Java变现的读书笔记"><a href="#C-向Java变现的读书笔记" class="headerlink" title="C++向Java变现的读书笔记"></a>C++向Java变现的读书笔记</h2><p>以下根据阅读&lt;Java核心技术 中文版 9th 卷一 &gt;</p>
+<h2 id="C-向Java变现的读书笔记"><a href="#C-向Java变现的读书笔记" class="headerlink" title="C++向Java变现的读书笔记"></a>C++向Java变现的读书笔记</h2><p>以下根据阅读<Java核心技术 中文版 9th 卷一 ></p>
 <p>整理了C++与Java的异同还有我在C++中没见过的东西, </p>
 <p>方便我自己梳理与查阅 :D</p>
 <p><del>这几天速成过程也很邋遢, 可能有一些很傻的错误</del></p>
 <p>而且书还没读完, 变现还没成功, 后面应该会继续补</p>
-<p> <font color=gray size=2><em>以下分点顺序大概是按照Java大部分书籍板块顺序来进行的</em></font></p>
+ <font color=gray size=2>*以下分点顺序大概是按照Java大部分书籍板块顺序来进行的*</font>
+
 <hr>
 <ol>
 <li><p>源代码文件名<strong>必须</strong>与公共类名相同<br>main方法<strong>必须</strong>声明为public  <br>main方法<strong>必须</strong>有一个外壳类<br>main方法<strong>必须</strong>是静态的</p>
@@ -293,8 +293,8 @@
 </li>
 <li><p>Object类是Java中所有类的祖先.但不需要显式地写extends啥啥的<br>在Java中,只有primitive types不是对象</p>
 </li>
-<li><p>有时需要将primitive type转换为对象, 基本每种基本类型都有一个与之对应的wrapper(包装器?)<br>—————————————————————-<br>int-&gt;Integer<br>long-&gt;Long<br>float-&gt;Float<br>double-&gt;Double<br>short-&gt;Short<br>byte-&gt;Byte<br>———————–以上的超类是Number———–</p>
-<p>character-&gt;Character<br>void-&gt;Void<br>boolean-&gt;Boolean<br>—————————————————————-<br>一旦构造了包装器, 里面的值是 <em>final</em> 的<br>当有调用如 list.add(3);<br>这里等价于 list.add(Integer.valueOf(3))<br>这里称作<strong>autoboxing(自动装箱)</strong><br>而类似地, 将一个Integer对象赋给一个int时, 也会有自动拆箱</p>
+<li><p>有时需要将primitive type转换为对象, 基本每种基本类型都有一个与之对应的wrapper(包装器?)<br>————————————————————————————————<br>int-&gt;Integer<br>long-&gt;Long<br>float-&gt;Float<br>double-&gt;Double<br>short-&gt;Short<br>byte-&gt;Byte<br>———————————-以上的超类是Number—————-</p>
+<p>character-&gt;Character<br>void-&gt;Void<br>boolean-&gt;Boolean<br>————————————————————————————————<br>一旦构造了包装器, 里面的值是 <em>final</em> 的<br>当有调用如 list.add(3);<br>这里等价于 list.add(Integer.valueOf(3))<br>这里称作<strong>autoboxing(自动装箱)</strong><br>而类似地, 将一个Integer对象赋给一个int时, 也会有自动拆箱</p>
 </li>
 </ol>
 
@@ -574,7 +574,24 @@
         });
       })
       ;
-    </script>
+    </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
   
 
 
