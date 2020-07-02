@@ -87,7 +87,7 @@
 <meta property="og:description" content="洗稿浙大版的读书笔记 日常心慌, 赶快多读点这个啥">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-28T06:51:47.861Z">
-<meta property="article:modified_time" content="2020-06-28T07:28:59.606Z">
+<meta property="article:modified_time" content="2020-06-28T07:39:58.193Z">
 <meta property="article:author" content="xyy">
 <meta name="twitter:card" content="summary">
 
@@ -316,9 +316,9 @@
 <h3 id="三-事件间的关系与事件的运算"><a href="#三-事件间的关系与事件的运算" class="headerlink" title="(三) 事件间的关系与事件的运算"></a>(三) 事件间的关系与事件的运算</h3><p>几种关系:</p>
 <ul>
 <li>相等</li>
-<li>和事件 $A \cup B={x \mid x \in A \text { 或 } x \in B}$</li>
-<li>积事件 $A \cap B={x \mid x \in A \text { 且 } x \in B}$</li>
-<li>差事件 $A-B={x \mid x \in A \text { 且 } x \notin B}$</li>
+<li>和事件 $A \cup B=\{x \mid x \in A \text { 或 } x \in B\}$</li>
+<li>积事件 $A \cap B=\{x \mid x \in A \text { 且 } x \in B\}$</li>
+<li>差事件 $A-B=\{x \mid x \in A \text { 且 } x \notin B\}$</li>
 <li>互斥事件 $A \cap B=\varnothing$</li>
 <li>逆事件(两个事件必有一个发生, 且仅有一个) $A \cup B=S$ 且 $A \cap B=\varnothing$</li>
 </ul>
@@ -337,15 +337,15 @@
 </li>
 </ul>
 <p>==注释: 注意分辨结合律与分配律的符号啊!==</p>
-<h2 id="sect-3-频率与概率"><a href="#sect-3-频率与概率" class="headerlink" title="&sect; 3 频率与概率"></a>&sect; 3 频率与概率</h2><h3 id="一-频率"><a href="#一-频率" class="headerlink" title="(一) 频率"></a>(一) 频率</h3><p>频率的定义: 在相同条件下, 进行了n次实验, 在其中, 事件A发生的次数$n<em>A$称为事件A发生的频数, 比值$n_a/n$称为事件A发生的频率, 并记成$f</em>{n}(A)$</p>
+<h2 id="sect-3-频率与概率"><a href="#sect-3-频率与概率" class="headerlink" title="&sect; 3 频率与概率"></a>&sect; 3 频率与概率</h2><h3 id="一-频率"><a href="#一-频率" class="headerlink" title="(一) 频率"></a>(一) 频率</h3><p>频率的定义: 在相同条件下, 进行了n次实验, 在其中, 事件A发生的次数$n_A$称为事件A发生的频数, 比值$n_a/n$称为事件A发生的频率, 并记成$f_{n}(A)$</p>
 <p><strong>三大基本性质</strong></p>
 <ol>
 <li><p>$0 \leqslant f_{n}(A) \leqslant 1$</p>
 </li>
 <li><p>$f_{n}(S)=1$</p>
 </li>
-<li><p>若 $A<em>{1}, A</em>{2}, \cdots, A_{k}$ 是两两互不相容的事件,则</p>
-<p>$f<em>{n}\left(A</em>{1} \cup A<em>{2} \cup \cdots \cup A</em>{k}\right)=f<em>{n}\left(A</em>{1}\right)+f<em>{n}\left(A</em>{2}\right)+\cdots+f<em>{n}\left(A</em>{k}\right)$</p>
+<li><p>若 $A_{1}, A_{2}, \cdots, A_{k}$ 是两两互不相容的事件,则</p>
+<p>$f_{n}\left(A_{1} \cup A_{2} \cup \cdots \cup A_{k}\right)=f_{n}\left(A_{1}\right)+f_{n}\left(A_{2}\right)+\cdots+f_{n}\left(A_{k}\right)$</p>
 </li>
 </ol>
 <h3 id="二-概率"><a href="#二-概率" class="headerlink" title="(二) 概率"></a>(二) 概率</h3><p>概率的定义: 设E是随机实验, S是样本空间, 对于E的每一事件A赋予一个实数, 记为$P(A)$, 称为事件A的概率.</p>
@@ -353,13 +353,13 @@
 <ol>
 <li>非负性, 即大于0</li>
 <li>规范性, 即$P(S) = 1$</li>
-<li>可列可加性, 设 $A<em>{1}, A</em>{2}, \cdots$ 是两两互不相容的事件, 即对于 $A<em>{i} A</em>{j}=\varnothing$, $i \neq j, i, j=1,2, \cdots,$ 有$P\left(A<em>{1} \cup A</em>{2} \cup \cdots\right)=P\left(A<em>{1}\right)+P\left(A</em>{2}\right)+\cdots$</li>
+<li>可列可加性, 设 $A_{1}, A_{2}, \cdots$ 是两两互不相容的事件, 即对于 $A_{i} A_{j}=\varnothing$, $i \neq j, i, j=1,2, \cdots,$ 有$P\left(A_{1} \cup A_{2} \cup \cdots\right)=P\left(A_{1}\right)+P\left(A_{2}\right)+\cdots$</li>
 </ol>
 <p>可以由上推出以下几个性质</p>
 <ul>
 <li><p>$P(\varnothing)=0$</p>
 </li>
-<li><p>(有限可加性) 若 $A<em>{1}, A</em>{2}, \cdots, A<em>{n}$ 是两两互不相容的事件,则有$P\left(A</em>{1} \cup A<em>{2} \cup \cdots \cup A</em>{n}\right)=P\left(A<em>{1}\right)+P\left(A</em>{2}\right)+\cdots+P\left(A_{n}\right)$</p>
+<li><p>(有限可加性) 若 $A_{1}, A_{2}, \cdots, A_{n}$ 是两两互不相容的事件,则有$P\left(A_{1} \cup A_{2} \cup \cdots \cup A_{n}\right)=P\left(A_{1}\right)+P\left(A_{2}\right)+\cdots+P\left(A_{n}\right)$</p>
 </li>
 <li><p>设 $A, B$ 是两个事件,若 $A \subset B$,则有</p>
 <p>$P(B-A)=P(B)-P(A)$</p>
@@ -391,13 +391,13 @@ P(B \mid A)=\frac{P(A B)}{P(A)}</script><p>为在事件 A 发生的条件下事�
 </ol>
 <h3 id="二-乘法定理"><a href="#二-乘法定理" class="headerlink" title="(二) 乘法定理"></a>(二) 乘法定理</h3><p><strong>乘法定理</strong>: 设 $P(A)&gt;0$,则有 $P(A B)=P(B \mid A) P(A)$</p>
 <h3 id="三-全概率公式和贝叶斯公式"><a href="#三-全概率公式和贝叶斯公式" class="headerlink" title="(三) 全概率公式和贝叶斯公式"></a>(三) 全概率公式和贝叶斯公式</h3><p><strong>划分</strong>的定义:  </p>
-<p>设 S 为试验 E 的样本空间 , $B<em>{1}, B</em>{2}, \cdots, B_{n}$ 为 $E$ 的一组事件.若</p>
-<p>(i) $B<em>{i} B</em>{j}=\varnothing, i \neq j, i, j=1,2, \cdots, n$</p>
-<p>(ii) $B<em>{1} \cup B</em>{2} \cup \cdots \cup B_{n}=S$</p>
-<p>则称 $B<em>{1}, B</em>{2}, \cdots, B_{n}$ 为样本空间 $S$ 的一个划分.</p>
+<p>设 S 为试验 E 的样本空间 , $B_{1}, B_{2}, \cdots, B_{n}$ 为 $E$ 的一组事件.若</p>
+<p>(i) $B_{i} B_{j}=\varnothing, i \neq j, i, j=1,2, \cdots, n$</p>
+<p>(ii) $B_{1} \cup B_{2} \cup \cdots \cup B_{n}=S$</p>
+<p>则称 $B_{1}, B_{2}, \cdots, B_{n}$ 为样本空间 $S$ 的一个划分.</p>
 <hr>
 <p><strong>全概率公式</strong> : </p>
-<p>设试验 E 的样本空间为 S，A 为 E 的事件, $B<em>{1}, B</em>{2}, \cdots, B<em>{n}$ 为 $S$ 的一个划分，且 $P\left(B</em>{i}\right)&gt;0(i=1,2, \cdots, n),$ 则</p>
+<p>设试验 E 的样本空间为 S，A 为 E 的事件, $B_{1}, B_{2}, \cdots, B_{n}$ 为 $S$ 的一个划分，且 $P\left(B_{i}\right)&gt;0(i=1,2, \cdots, n),$ 则</p>
 <script type="math/tex; mode=display">\begin{array}{c}
 P(A)=P\left(A \mid B_{1}\right) P\left(B_{1}\right)+P\left(A \mid B_{2}\right) P\left(B_{2}\right)+\cdots+ \\
 P\left(A \mid B_{n}\right) P\left(B_{n}\right)
@@ -405,7 +405,7 @@ P\left(A \mid B_{n}\right) P\left(B_{n}\right)
 <p>==用处:用于计算由若干原因引起的复杂事件概率==</p>
 <hr>
 <p><strong>贝叶斯公式</strong>: </p>
-<p>设试验 E 的样本空间为 S.A 为 E 的事件，$B<em>{1}, B</em>{2}, \cdots, B<em>{n}$ 为 $S$ 的一<br>个划分，且 $P(A)&gt;0, P\left(B</em>{i}\right)&gt;0(i=1,2, \cdots, n),$ 则</p>
+<p>设试验 E 的样本空间为 S.A 为 E 的事件，$B_{1}, B_{2}, \cdots, B_{n}$ 为 $S$ 的一<br>个划分，且 $P(A)&gt;0, P\left(B_{i}\right)&gt;0(i=1,2, \cdots, n),$ 则</p>
 <script type="math/tex; mode=display">
 P\left(B_{i} \mid A\right)=\frac{P\left(A \mid B_{i}\right) P\left(B_{i}\right)}{\sum_{j=1}^{n} P\left(A \mid B_{j}\right) P\left(B_{j}\right)}, \quad i=1,2, \cdots, n</script><p>称为贝叶斯 (Bayes)公式</p>
 <p>(可以通过条件概率+乘法定理+全概率公式加以证明)</p>
